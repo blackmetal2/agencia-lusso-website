@@ -1,0 +1,42 @@
+<svg width="140" height="60" viewBox="0 0 140 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Elegant serif "Lusso" text -->
+  <text
+    x="70"
+    y="32"
+    font-family="'Playfair Display', Georgia, serif"
+    font-size="32"
+    font-weight="700"
+    font-style="italic"
+    fill="#6B1F1F"
+    text-anchor="middle"
+    letter-spacing="1"
+  >
+    Lusso
+  </text>
+
+  <!-- "AGÊNCIA" subtitle -->
+  <text
+    x="70"
+    y="50"
+    font-family="'Inter', sans-serif"
+    font-size="8"
+    font-weight="600"
+    fill="#D4AF37"
+    text-anchor="middle"
+    letter-spacing="3"
+    opacity="0.9"
+  >
+    AGÊNCIA
+  </text>
+
+  <!-- Decorative accent line -->
+  <line
+    x1="35"
+    y1="38"
+    x2="105"
+    y2="38"
+    stroke="#D4AF37"
+    stroke-width="0.5"
+    opacity="0.4"
+  />
+</svg>
