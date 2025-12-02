@@ -3,9 +3,12 @@ import { Variants } from "framer-motion";
 // Page transitions
 export const pageTransition: Variants = {
   initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: "easeInOut" }
+  },
   exit: { opacity: 0, y: -20 },
-  transition: { duration: 0.4, ease: "easeInOut" },
 };
 
 // Hero text reveal (stagger effect)
