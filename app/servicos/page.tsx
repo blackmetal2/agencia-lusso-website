@@ -62,13 +62,13 @@ export default function ServicosPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="pt-32 lg:pt-40 pb-20 lg:pb-24 px-6 lg:px-12 bg-[var(--lusso-ivory)]">
+      <section className="pt-24 sm:pt-28 lg:pt-40 pb-16 sm:pb-20 lg:pb-24 px-4 sm:px-6 lg:px-12 bg-[var(--lusso-ivory)]">
         <div className="container mx-auto max-w-4xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="overline mb-6"
+            className="overline mb-4 sm:mb-6"
           >
             O Que Fazemos
           </motion.div>
@@ -77,7 +77,7 @@ export default function ServicosPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-accent text-6xl lg:text-7xl tracking-tight text-[var(--lusso-charcoal)] leading-tight mb-8"
+            className="font-accent text-4xl sm:text-5xl lg:text-7xl tracking-tight text-[var(--lusso-charcoal)] leading-tight mb-6 sm:mb-8"
           >
             Nossos
             <br />
@@ -88,7 +88,7 @@ export default function ServicosPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-[var(--lusso-stone)] text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto"
+            className="text-[var(--lusso-stone)] text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto"
           >
             Soluções completas de marketing, design e branding para elevar sua marca
             e gerar resultados reais.
@@ -113,32 +113,54 @@ export default function ServicosPage() {
           <section
             key={service.id}
             id={service.id}
-            className={`py-20 lg:py-24 px-6 lg:px-12 ${bgColor}`}
+            className={`py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-12 ${bgColor}`}
           >
             <div className="container mx-auto max-w-7xl">
-              <div className="grid lg:grid-cols-12 gap-16 lg:gap-20 items-start">
-                {/* Service Number & Title */}
-                <div className={`lg:col-span-5 ${isEven ? "" : "lg:order-2"}`}>
+              <div className="grid lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-20 items-start">
+                {/* Service Image - Left Column for odd indices, Right for even */}
+                <div className={`lg:col-span-7 ${isEven ? "" : "lg:order-2"} order-first lg:order-none`}>
+                  <div className="relative aspect-[4/3] sm:aspect-[16/10] overflow-hidden rounded-sm border border-[var(--lusso-taupe)]/20 shadow-lg group max-w-lg mx-auto lg:max-w-none">
+                    <Image
+                      src={
+                        index === 0
+                          ? "/images/services/social-media.jpg"
+                          : index === 1
+                          ? "/images/services/design-process.png"
+                          : "/images/services/branding-work.jpg"
+                      }
+                      alt={`${service.title} - Agência Lusso`}
+                      fill
+                      className="object-cover grayscale-[30%] contrast-110 transition-all duration-500 group-hover:scale-105"
+                      quality={90}
+                      sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 800px"
+                    />
+                    {/* Subtle overlay on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--lusso-charcoal)]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  </div>
+                </div>
+
+                {/* Service Content - Right Column for odd indices, Left for even */}
+                <div className={`lg:col-span-5 ${isEven ? "" : "lg:order-1"}`}>
                   <div>
-                    <div className={`font-accent text-8xl lg:text-9xl ${index === 2 ? "text-[var(--lusso-sage)]/20" : "text-[var(--lusso-sage)]/30"} mb-8`}>
+                    <div className={`font-accent text-6xl sm:text-7xl lg:text-9xl ${index === 2 ? "text-[var(--lusso-sage)]/20" : "text-[var(--lusso-sage)]/30"} mb-4 sm:mb-6 lg:mb-8`}>
                       {service.number}
                     </div>
 
-                    <h2 className={`font-accent text-4xl lg:text-5xl ${textColor} tracking-tight leading-tight mb-6`}>
+                    <h2 className={`font-accent text-3xl sm:text-4xl lg:text-5xl ${textColor} tracking-tight leading-tight mb-4 sm:mb-6`}>
                       {service.title}
                     </h2>
 
-                    <p className={`${accentColor} text-lg leading-relaxed mb-8`}>
+                    <p className={`${accentColor} text-base sm:text-lg leading-relaxed mb-6 sm:mb-8`}>
                       {service.description}
                     </p>
 
-                    <p className={`text-sm ${accentColor} italic mb-12`}>
+                    <p className={`text-xs sm:text-sm ${accentColor} italic mb-8 sm:mb-12`}>
                       {service.ideal}
                     </p>
 
                     <Link
                       href="/contato"
-                      className={`inline-flex items-center gap-3 px-8 py-4 ${
+                      className={`inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base w-full sm:w-auto ${
                         index === 2
                           ? "bg-[var(--lusso-ivory)] text-[var(--lusso-charcoal)] hover:bg-[var(--lusso-sage)]"
                           : "bg-[var(--lusso-charcoal)] text-[var(--lusso-ivory)] hover:bg-[var(--lusso-sage)]"
@@ -159,28 +181,27 @@ export default function ServicosPage() {
                         />
                       </svg>
                     </Link>
-                  </div>
-                </div>
 
-                {/* Features List */}
-                <div className={`lg:col-span-7 ${isEven ? "" : "lg:order-1"}`}>
-                  <div>
-                    <div className="space-y-4">
-                      {service.features.map((feature, idx) => (
+                    {/* Feature highlights - Condensed list */}
+                    <div className="mt-8 sm:mt-12 space-y-2">
+                      {service.features.slice(0, 4).map((feature, idx) => (
                         <div
                           key={idx}
-                          className={`py-4 border-b ${index === 2 ? "border-[var(--lusso-ivory)]/10" : "border-[var(--lusso-taupe)]/20"} last:border-0`}
+                          className="flex items-start gap-2 sm:gap-3"
                         >
-                          <div className="flex items-start gap-4">
-                            <span className={`font-accent text-2xl ${index === 2 ? "text-[var(--lusso-sage)]" : "text-[var(--lusso-sage)]"} shrink-0`}>
-                              {String(idx + 1).padStart(2, "0")}
-                            </span>
-                            <span className={`${accentColor} text-base leading-relaxed pt-1`}>
-                              {feature}
-                            </span>
-                          </div>
+                          <span className={`${index === 2 ? "text-[var(--lusso-sage)]" : "text-[var(--lusso-sage)]"} shrink-0 mt-1`}>
+                            •
+                          </span>
+                          <span className={`${accentColor} text-xs sm:text-sm leading-relaxed`}>
+                            {feature}
+                          </span>
                         </div>
                       ))}
+                      {service.features.length > 4 && (
+                        <p className={`text-xs ${accentColor} italic mt-3 sm:mt-4`}>
+                          + {service.features.length - 4} outros benefícios
+                        </p>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -191,18 +212,18 @@ export default function ServicosPage() {
       })}
 
       {/* Process Section */}
-      <section className="py-20 lg:py-24 px-6 lg:px-12 bg-[var(--lusso-ivory)]">
+      <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-12 bg-[var(--lusso-ivory)]">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-20">
-            <div className="overline mb-4">Nosso Processo</div>
-            <h2 className="font-accent text-5xl lg:text-6xl tracking-tight text-[var(--lusso-charcoal)] leading-tight">
+          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+            <div className="overline mb-3 sm:mb-4">Nosso Processo</div>
+            <h2 className="font-accent text-3xl sm:text-4xl lg:text-6xl tracking-tight text-[var(--lusso-charcoal)] leading-tight">
               Como
               <br />
               <span className="serif-italic">Trabalhamos</span>
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {[
               {
                 step: "01",
@@ -227,15 +248,15 @@ export default function ServicosPage() {
             ].map((item, idx) => (
               <div
                 key={item.step}
-                className="space-y-4"
+                className="space-y-3 sm:space-y-4"
               >
-                <div className="font-accent text-6xl text-[var(--lusso-sage)]/30">
+                <div className="font-accent text-5xl sm:text-6xl text-[var(--lusso-sage)]/30">
                   {item.step}
                 </div>
-                <h3 className="font-accent text-2xl text-[var(--lusso-charcoal)]">
+                <h3 className="font-accent text-xl sm:text-2xl text-[var(--lusso-charcoal)]">
                   {item.title}
                 </h3>
-                <p className="text-[var(--lusso-stone)] leading-relaxed">
+                <p className="text-[var(--lusso-stone)] leading-relaxed text-sm sm:text-base">
                   {item.description}
                 </p>
               </div>

@@ -42,31 +42,18 @@ export default function SobrePage() {
       </section>
 
       {/* Nossa História */}
-      <section className="py-20 lg:py-24 px-6 lg:px-12 bg-[var(--lusso-warm-white)]">
+      <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-12 bg-[var(--lusso-warm-white)]">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid lg:grid-cols-12 gap-16 lg:gap-20">
+          <div className="grid lg:grid-cols-12 gap-10 sm:gap-16 lg:gap-20 items-start">
+            {/* Text Content - Left */}
             <div className="lg:col-span-5">
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.1 }}
-                transition={{ duration: 0.3 }}
-                className="font-accent text-5xl lg:text-6xl text-[var(--lusso-charcoal)] tracking-tight leading-tight mb-8"
-              >
+              <h2 className="font-accent text-4xl sm:text-5xl lg:text-6xl text-[var(--lusso-charcoal)] tracking-tight leading-tight mb-6 sm:mb-8">
                 Nossa
                 <br />
                 <span className="serif-italic">História</span>
-              </motion.h2>
-            </div>
+              </h2>
 
-            <div className="lg:col-span-7">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.1 }}
-                transition={{ duration: 0.3 }}
-                className="space-y-6 text-[var(--lusso-stone)] leading-relaxed"
-              >
+              <div className="space-y-4 sm:space-y-6 text-[var(--lusso-stone)] leading-relaxed text-sm sm:text-base">
                 <p>
                   A Agência Lusso nasceu da paixão por criar marcas que realmente
                   conectam com as pessoas. Fundada no Espírito Santo, começamos com
@@ -84,7 +71,23 @@ export default function SobrePage() {
                   e branding, oferecendo soluções completas e personalizadas que geram
                   resultados reais para nossos clientes.
                 </p>
-              </motion.div>
+              </div>
+            </div>
+
+            {/* Team Image - Right */}
+            <div className="lg:col-span-7 order-first lg:order-last">
+              <div className="relative aspect-[3/4] sm:aspect-[4/5] overflow-hidden rounded-sm border border-[var(--lusso-taupe)]/20 shadow-lg group max-w-md mx-auto lg:max-w-none">
+                <Image
+                  src="/images/about/historia-team.jpg"
+                  alt="Equipe Agência Lusso - Nossa História"
+                  fill
+                  className="object-cover grayscale-[30%] contrast-110 transition-all duration-500 group-hover:scale-102"
+                  quality={90}
+                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 600px"
+                />
+                {/* Subtle overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--lusso-charcoal)]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              </div>
             </div>
           </div>
         </div>

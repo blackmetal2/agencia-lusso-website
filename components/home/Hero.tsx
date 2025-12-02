@@ -1,18 +1,38 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+
+const heroImages = [
+  "/images/hero/hero-bg-1.jpg",
+  "/images/hero/hero-bg-2.jpg",
+  "/images/hero/hero-bg-3.jpg",
+];
 
 export function Hero() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    if (isPaused) return;
+
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+    }, 5000); // Change every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [isPaused]);
+
   return (
-    <section className="relative bg-[var(--lusso-ivory)] overflow-hidden pt-32 lg:pt-40 pb-16 lg:pb-24">
+    <section className="relative bg-[var(--lusso-ivory)] overflow-hidden pt-24 sm:pt-28 lg:pt-40 pb-12 sm:pb-16 lg:pb-24">
       {/* Asymmetric Layout Grid */}
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="grid lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-20 items-center">
 
           {/* Left Column - Typography */}
-          <div className="lg:col-span-7 space-y-8">
+          <div className="lg:col-span-7 space-y-6 sm:space-y-8">
             {/* Overline */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -29,7 +49,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="font-accent text-[clamp(3rem,10vw,8rem)] leading-[0.95] tracking-tight text-[var(--lusso-charcoal)]"
+                className="font-accent text-[clamp(2.5rem,8vw,8rem)] leading-[0.95] tracking-tight text-[var(--lusso-charcoal)]"
               >
                 Transformamos
               </motion.h1>
@@ -38,7 +58,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                className="font-accent text-[clamp(3rem,10vw,8rem)] leading-[0.95] tracking-tight text-[var(--lusso-charcoal)] pl-12 lg:pl-20"
+                className="font-accent text-[clamp(2.5rem,8vw,8rem)] leading-[0.95] tracking-tight text-[var(--lusso-charcoal)] pl-6 sm:pl-12 lg:pl-20"
               >
                 <span className="serif-italic">marcas</span> em
               </motion.h1>
@@ -47,7 +67,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="font-accent text-[clamp(3rem,10vw,8rem)] leading-[0.95] tracking-tight"
+                className="font-accent text-[clamp(2.5rem,8vw,8rem)] leading-[0.95] tracking-tight"
                 style={{ color: 'var(--lusso-sage)' }}
               >
                 experiências
@@ -59,7 +79,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="max-w-md text-[var(--lusso-stone)] leading-relaxed text-base lg:text-lg pl-0 lg:pl-8"
+              className="max-w-md text-[var(--lusso-stone)] leading-relaxed text-sm sm:text-base lg:text-lg pl-0 sm:pl-0 lg:pl-8"
             >
               Criamos identidades visuais que capturam a essência das marcas e conectam
               de forma autêntica com seu público através de design estratégico e narrativas visuais.
@@ -70,11 +90,11 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col sm:flex-row gap-4 pt-4 lg:pl-8"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4 lg:pl-8"
             >
               <Link
                 href="/portfolio"
-                className="group inline-flex items-center gap-3 px-8 py-4 bg-[var(--lusso-charcoal)] text-[var(--lusso-ivory)] hover:bg-[var(--lusso-charcoal-soft)] transition-all duration-300"
+                className="group inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-[var(--lusso-charcoal)] text-[var(--lusso-ivory)] hover:bg-[var(--lusso-charcoal-soft)] transition-all duration-300 text-sm sm:text-base"
               >
                 <span className="font-medium tracking-wide">Ver Portfólio</span>
                 <svg
@@ -89,7 +109,7 @@ export function Hero() {
 
               <Link
                 href="/contato"
-                className="group inline-flex items-center gap-3 px-8 py-4 border-2 border-[var(--lusso-charcoal)] text-[var(--lusso-charcoal)] hover:bg-[var(--lusso-charcoal)] hover:text-[var(--lusso-ivory)] transition-all duration-300"
+                className="group inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 border-2 border-[var(--lusso-charcoal)] text-[var(--lusso-charcoal)] hover:bg-[var(--lusso-charcoal)] hover:text-[var(--lusso-ivory)] transition-all duration-300 text-sm sm:text-base"
               >
                 <span className="font-medium tracking-wide">Iniciar Projeto</span>
               </Link>
@@ -97,24 +117,38 @@ export function Hero() {
           </div>
 
           {/* Right Column - Visual Element */}
-          <div className="lg:col-span-5 relative">
+          <div className="lg:col-span-5 relative mt-8 lg:mt-0">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="relative aspect-[4/5] rounded-sm overflow-hidden shadow-2xl"
+              className="relative aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] rounded-sm overflow-hidden shadow-2xl max-w-md mx-auto lg:max-w-none"
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
             >
-              <Image
-                src="/images/hero/hero-bg-1.jpg"
-                alt="Agência Lusso - Design & Branding"
-                fill
-                className="object-cover grayscale-[30%] contrast-110"
-                priority
-                quality={90}
-              />
+              {/* Rotating Images */}
+              <AnimatePresence mode="sync">
+                <motion.div
+                  key={currentImageIndex}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 2, ease: "easeInOut" }}
+                  className="absolute inset-0"
+                >
+                  <Image
+                    src={heroImages[currentImageIndex]}
+                    alt={`Agência Lusso - Design & Branding ${currentImageIndex + 1}`}
+                    fill
+                    className="object-cover grayscale-[30%] contrast-110"
+                    priority={currentImageIndex === 0}
+                    quality={90}
+                  />
+                </motion.div>
+              </AnimatePresence>
 
               {/* Subtle overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[var(--lusso-charcoal)]/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[var(--lusso-charcoal)]/20 to-transparent z-10" />
             </motion.div>
 
             {/* Decorative element */}
