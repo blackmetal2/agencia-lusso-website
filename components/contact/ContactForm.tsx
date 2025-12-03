@@ -161,9 +161,13 @@ export function ContactForm() {
                       <SelectValue placeholder="Selecione um serviço" />
                     </SelectTrigger>
                   </FormControl>
-                  <SelectContent className="bg-white border-[var(--lusso-taupe)]/30">
+                  <SelectContent className="!bg-white border-[var(--lusso-taupe)]/30 shadow-lg">
                     {Object.entries(serviceTypeLabels).map(([value, label]) => (
-                      <SelectItem key={value} value={value} className="hover:bg-[var(--lusso-sage)]/10">
+                      <SelectItem
+                        key={value}
+                        value={value}
+                        className="hover:bg-[var(--lusso-sage)]/10 bg-white cursor-pointer"
+                      >
                         {label}
                       </SelectItem>
                     ))}
