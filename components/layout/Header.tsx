@@ -64,14 +64,20 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden fixed inset-0 top-20 bg-[var(--lusso-ivory)] z-40">
-          <nav className="container mx-auto px-6 py-8 flex flex-col gap-6">
+        <div
+          className="md:hidden fixed inset-0 top-20 z-50"
+          style={{ backgroundColor: '#FAF8F3' }}
+        >
+          <nav
+            className="container mx-auto px-6 py-8 flex flex-col gap-6 h-full"
+            style={{ backgroundColor: '#FAF8F3' }}
+          >
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className={`text-2xl font-accent transition-colors ${
+                className={`text-2xl font-accent transition-colors py-2 border-b border-[var(--lusso-taupe)]/10 ${
                   pathname === link.href
                     ? "text-[var(--lusso-sage)]"
                     : "text-[var(--lusso-charcoal)] hover:text-[var(--lusso-sage)]"
