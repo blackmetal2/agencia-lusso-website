@@ -6,21 +6,21 @@ import { motion } from "framer-motion";
 const services = [
   {
     number: "01",
-    title: "Gestão de Redes Sociais",
+    title: "gestão de redes sociais",
     description:
       "Criamos conteúdo estratégico e autêntico que conecta sua marca com o público certo.",
     href: "/servicos#social-media",
   },
   {
     number: "02",
-    title: "Design Gráfico",
+    title: "design gráfico",
     description:
       "Desenvolvemos materiais visuais que comunicam a essência da sua marca.",
     href: "/servicos#design",
   },
   {
     number: "03",
-    title: "Branding & Identidade Visual",
+    title: "branding & identidade visual",
     description:
       "Construímos marcas memoráveis do zero ou revitalizamos identidades existentes.",
     href: "/servicos#branding",
@@ -49,7 +49,7 @@ export function ServicesPreview() {
             transition={{ duration: 0.3 }}
             className="font-accent text-5xl lg:text-6xl tracking-tight text-[var(--lusso-charcoal)] leading-tight"
           >
-            Soluções que
+            soluções que
             <br />
             <span className="serif-italic">elevam marcas</span>
           </motion.h2>
@@ -70,9 +70,15 @@ export function ServicesPreview() {
                 className="group block border-t border-[var(--lusso-taupe)]/30 py-8 lg:py-12 transition-colors hover:border-[var(--lusso-sage)]"
               >
                 <div className="grid lg:grid-cols-12 gap-6 lg:gap-12 items-start">
-                  {/* Number */}
+                  {/* Number - Helvetica Extra Compressed */}
                   <div className="lg:col-span-2">
-                    <span className="font-accent text-6xl text-[var(--lusso-sage)]/30 group-hover:text-[var(--lusso-sage)] transition-colors">
+                    <span
+                      className="text-6xl lg:text-7xl text-[var(--lusso-sage)]/30 group-hover:text-[var(--lusso-sage)] transition-colors"
+                      style={{
+                        fontFamily: "'Helvetica Extra Compressed', 'Helvetica', sans-serif",
+                        letterSpacing: '0.05em',
+                      }}
+                    >
                       {service.number}
                     </span>
                   </div>
@@ -126,9 +132,9 @@ export function ServicesPreview() {
         >
           <Link
             href="/servicos"
-            className="inline-flex items-center gap-3 text-sm font-medium tracking-wide text-[var(--lusso-charcoal)] hover:text-[var(--lusso-sage)] transition-colors uppercase"
+            className="inline-flex items-center gap-3 text-sm font-medium tracking-wide text-[var(--lusso-charcoal)] hover:text-[var(--lusso-sage)] transition-colors"
           >
-            <span>Ver todos os serviços</span>
+            <span>ver todos os serviços</span>
             <svg
               className="w-4 h-4"
               fill="none"

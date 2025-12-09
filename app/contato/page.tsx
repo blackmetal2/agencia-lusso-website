@@ -21,9 +21,9 @@ export default function ContatoPage() {
               <div className="overline">Vamos Conversar</div>
 
               <h1 className="font-accent text-6xl lg:text-7xl tracking-tight text-[var(--lusso-charcoal)] leading-tight">
-                Entre em
+                entre em
                 <br />
-                <span className="serif-italic">Contato</span>
+                <span className="serif-italic">contato</span>
               </h1>
 
               <p className="text-[var(--lusso-stone)] text-lg leading-relaxed">
@@ -34,8 +34,8 @@ export default function ContatoPage() {
               {/* Contact Info */}
               <div className="space-y-6 pt-8 border-t border-[var(--lusso-taupe)]/20">
                 <div>
-                  <div className="text-xs tracking-widest uppercase mb-2 text-[var(--lusso-sage)]">
-                    Telefone
+                  <div className="text-xs tracking-widest mb-2 text-[var(--lusso-sage)]">
+                    telefone
                   </div>
                   <a
                     href="tel:+5527998507890"
@@ -46,8 +46,8 @@ export default function ContatoPage() {
                 </div>
 
                 <div>
-                  <div className="text-xs tracking-widest uppercase mb-2 text-[var(--lusso-sage)]">
-                    E-mail
+                  <div className="text-xs tracking-widest mb-2 text-[var(--lusso-sage)]">
+                    e-mail
                   </div>
                   <a
                     href="mailto:lussocontato@gmail.com"
@@ -58,8 +58,8 @@ export default function ContatoPage() {
                 </div>
 
                 <div>
-                  <div className="text-xs tracking-widest uppercase mb-2 text-[var(--lusso-sage)]">
-                    Instagram
+                  <div className="text-xs tracking-widest mb-2 text-[var(--lusso-sage)]">
+                    instagram
                   </div>
                   <a
                     href="https://www.instagram.com/agencialusso"
@@ -72,8 +72,22 @@ export default function ContatoPage() {
                 </div>
 
                 <div>
-                  <div className="text-xs tracking-widest uppercase mb-2 text-[var(--lusso-sage)]">
-                    Localização
+                  <div className="text-xs tracking-widest mb-2 text-[var(--lusso-sage)]">
+                    linkedin
+                  </div>
+                  <a
+                    href="https://www.linkedin.com/company/90883279"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[var(--lusso-charcoal)] hover:text-[var(--lusso-sage)] transition-colors"
+                  >
+                    Agência Lusso
+                  </a>
+                </div>
+
+                <div>
+                  <div className="text-xs tracking-widest mb-2 text-[var(--lusso-sage)]">
+                    localização
                   </div>
                   <p className="text-[var(--lusso-stone)]">
                     Espírito Santo, Brasil
@@ -102,7 +116,7 @@ export default function ContatoPage() {
             className="max-w-lg mx-auto w-full"
           >
             <h2 className="font-accent text-4xl lg:text-5xl text-[var(--lusso-charcoal)] tracking-tight mb-8">
-              Envie sua <span className="serif-italic">mensagem</span>
+              envie sua <span className="serif-italic">mensagem</span>
             </h2>
 
             <ContactForm />

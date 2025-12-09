@@ -27,7 +27,7 @@ export function ContactCTA() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-accent text-5xl lg:text-6xl text-[var(--lusso-ivory)] tracking-tight leading-tight"
           >
-            Pronto para
+            pronto para
             <br />
             <span className="serif-italic">elevar sua marca?</span>
           </motion.h2>
@@ -57,7 +57,7 @@ export function ContactCTA() {
               href="/contato"
               className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-[var(--lusso-ivory)] text-[var(--lusso-charcoal)] hover:bg-[var(--lusso-sage)] hover:text-[var(--lusso-ivory)] transition-all duration-300"
             >
-              <span className="font-medium tracking-wide">Fale Conosco</span>
+              <span className="font-medium tracking-wide">fale conosco</span>
               <svg
                 className="w-4 h-4 group-hover:translate-x-1 transition-transform"
                 fill="none"
@@ -79,7 +79,7 @@ export function ContactCTA() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-[var(--lusso-ivory)] text-[var(--lusso-ivory)] hover:bg-[var(--lusso-ivory)] hover:text-[var(--lusso-charcoal)] transition-all duration-300"
             >
-              <span className="font-medium tracking-wide">WhatsApp</span>
+              <span className="font-medium tracking-wide">whatsapp</span>
             </Link>
           </motion.div>
 

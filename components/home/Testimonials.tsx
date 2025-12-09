@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 export function Testimonials() {
@@ -10,14 +9,14 @@ export function Testimonials() {
         "A Lusso transformou completamente nossa presença digital. O trabalho deles é impecável e superou todas as expectativas.",
       author: "Cliente 01",
       role: "Influenciador Digital",
-      image: "/images/portfolio/real/richardarraz.jpg",
+      image: "/images/testimonials/client-01.jpg",
     },
     {
       quote:
         "Profissionalismo, criatividade e atenção aos detalhes em cada entrega. Recomendo de olhos fechados!",
       author: "Cliente 02",
       role: "Criadora de Conteúdo",
-      image: "/images/portfolio/real/liliacoutinho-1.jpg",
+      image: "/images/testimonials/client-02.jpg",
     },
   ];
 
@@ -42,9 +41,9 @@ export function Testimonials() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-accent text-4xl sm:text-5xl lg:text-6xl tracking-tight text-[var(--lusso-charcoal)] leading-tight"
           >
-            O Que Nossos
+            o que nossos
             <br />
-            <span className="serif-italic">Clientes Dizem</span>
+            <span className="serif-italic">clientes dizem</span>
           </motion.h2>
         </div>
 
@@ -86,32 +85,27 @@ export function Testimonials() {
                     {/* Decorative Line */}
                     <div className="w-16 h-px bg-[var(--lusso-sage)]/30 mb-6" />
 
-                    {/* Author Attribution - Minimal & Elegant */}
-                    <div className="flex items-center gap-4">
-                      <div className="relative w-14 h-14 rounded-full overflow-hidden flex-shrink-0 border border-[var(--lusso-taupe)]/20">
-                        <Image
-                          src={testimonial.image}
-                          alt={testimonial.author}
-                          fill
-                          className="object-cover grayscale-[30%]"
-                        />
-                      </div>
-                      <div>
-                        <p className="font-medium text-base text-[var(--lusso-charcoal)]">
-                          {testimonial.author}
-                        </p>
-                        <p className="text-sm text-[var(--lusso-stone)]">
-                          {testimonial.role}
-                        </p>
-                      </div>
+                    {/* Author Attribution - Minimal & Elegant (No Photo) */}
+                    <div>
+                      <p className="font-medium text-base text-[var(--lusso-charcoal)]">
+                        {testimonial.author}
+                      </p>
+                      <p className="text-sm text-[var(--lusso-stone)]">
+                        {testimonial.role}
+                      </p>
                     </div>
                   </div>
                 </div>
 
-                {/* Large Number - Editorial Detail */}
+                {/* Large Number - Helvetica Extra Compressed */}
                 <div className={`lg:col-span-4 ${isEven ? "lg:order-last" : "lg:col-start-1 lg:row-start-1"} hidden lg:flex items-start justify-center`}>
                   <div className="relative">
-                    <span className="font-accent text-[12rem] lg:text-[14rem] leading-none text-[var(--lusso-sage)]/10 select-none">
+                    <span
+                      className="text-[12rem] lg:text-[14rem] leading-none text-[var(--lusso-sage)]/10 select-none"
+                      style={{
+                        fontFamily: "'Helvetica Extra Compressed', 'Helvetica', sans-serif",
+                      }}
+                    >
                       {String(index + 1).padStart(2, "0")}
                     </span>
                   </div>

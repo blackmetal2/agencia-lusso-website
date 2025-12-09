@@ -8,7 +8,7 @@ const services = [
   {
     id: "social-media",
     number: "01",
-    title: "Gestão de Redes Sociais",
+    title: "gestão de redes sociais",
     description:
       "Transformamos sua presença digital em resultados através de conteúdo estratégico e autêntico que conecta sua marca com o público certo.",
     features: [
@@ -25,7 +25,7 @@ const services = [
   {
     id: "design",
     number: "02",
-    title: "Design Gráfico",
+    title: "design gráfico",
     description:
       "Desenvolvemos materiais visuais que comunicam a essência da sua marca com criatividade, profissionalismo e atenção aos detalhes.",
     features: [
@@ -42,7 +42,7 @@ const services = [
   {
     id: "branding",
     number: "03",
-    title: "Branding & Identidade Visual",
+    title: "branding & identidade visual",
     description:
       "Construímos marcas memoráveis do zero ou revitalizamos identidades existentes com estratégia criativa e posicionamento claro.",
     features: [
@@ -79,9 +79,9 @@ export default function ServicosPage() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-accent text-4xl sm:text-5xl lg:text-7xl tracking-tight text-[var(--lusso-charcoal)] leading-tight mb-6 sm:mb-8"
           >
-            Nossos
+            nossos
             <br />
-            <span className="serif-italic">Serviços</span>
+            <span className="serif-italic">serviços</span>
           </motion.h1>
 
           <motion.p
@@ -142,7 +142,10 @@ export default function ServicosPage() {
                 {/* Service Content - Right Column for odd indices, Left for even */}
                 <div className={`lg:col-span-5 ${isEven ? "" : "lg:order-1"}`}>
                   <div>
-                    <div className={`font-accent text-6xl sm:text-7xl lg:text-9xl ${index === 2 ? "text-[var(--lusso-sage)]/20" : "text-[var(--lusso-sage)]/30"} mb-4 sm:mb-6 lg:mb-8`}>
+                    <div
+                      className={`text-6xl sm:text-7xl lg:text-9xl ${index === 2 ? "text-[var(--lusso-sage)]/20" : "text-[var(--lusso-sage)]/30"} mb-4 sm:mb-6 lg:mb-8`}
+                      style={{ fontFamily: "'Helvetica Extra Compressed', 'Helvetica', sans-serif" }}
+                    >
                       {service.number}
                     </div>
 
@@ -166,7 +169,7 @@ export default function ServicosPage() {
                           : "bg-[var(--lusso-charcoal)] text-[var(--lusso-ivory)] hover:bg-[var(--lusso-sage)]"
                       } transition-all duration-300`}
                     >
-                      <span className="font-medium tracking-wide">Solicitar Orçamento</span>
+                      <span className="font-medium tracking-wide">solicitar orçamento</span>
                       <svg
                         className="w-4 h-4"
                         fill="none"
@@ -215,11 +218,11 @@ export default function ServicosPage() {
       <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-12 bg-[var(--lusso-ivory)]">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-            <div className="overline mb-3 sm:mb-4">Nosso Processo</div>
+            <div className="overline mb-3 sm:mb-4">nosso processo</div>
             <h2 className="font-accent text-3xl sm:text-4xl lg:text-6xl tracking-tight text-[var(--lusso-charcoal)] leading-tight">
-              Como
+              como
               <br />
-              <span className="serif-italic">Trabalhamos</span>
+              <span className="serif-italic">trabalhamos</span>
             </h2>
           </div>
 
@@ -227,22 +230,22 @@ export default function ServicosPage() {
             {[
               {
                 step: "01",
-                title: "Descoberta",
+                title: "descoberta",
                 description: "Entendemos profundamente seu negócio, objetivos e público-alvo.",
               },
               {
                 step: "02",
-                title: "Estratégia",
+                title: "estratégia",
                 description: "Criamos um plano personalizado alinhado com suas metas.",
               },
               {
                 step: "03",
-                title: "Execução",
+                title: "execução",
                 description: "Desenvolvemos o projeto com excelência e atenção aos detalhes.",
               },
               {
                 step: "04",
-                title: "Acompanhamento",
+                title: "acompanhamento",
                 description: "Monitoramos resultados e ajustamos conforme necessário.",
               },
             ].map((item, idx) => (
@@ -250,7 +253,10 @@ export default function ServicosPage() {
                 key={item.step}
                 className="space-y-3 sm:space-y-4"
               >
-                <div className="font-accent text-5xl sm:text-6xl text-[var(--lusso-sage)]/30">
+                <div
+                  className="text-5xl sm:text-6xl text-[var(--lusso-sage)]/30"
+                  style={{ fontFamily: "'Helvetica Extra Compressed', 'Helvetica', sans-serif" }}
+                >
                   {item.step}
                 </div>
                 <h3 className="font-accent text-xl sm:text-2xl text-[var(--lusso-charcoal)]">

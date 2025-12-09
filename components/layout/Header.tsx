@@ -7,11 +7,11 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/sobre", label: "Sobre" },
-  { href: "/servicos", label: "Serviços" },
-  { href: "/portfolio", label: "Portfólio" },
-  { href: "/contato", label: "Contato" },
+  { href: "/", label: "home" },
+  { href: "/sobre", label: "sobre" },
+  { href: "/servicos", label: "serviços" },
+  { href: "/portfolio", label: "portfólio" },
+  { href: "/contato", label: "contato" },
 ];
 
 export function Header() {
@@ -32,17 +32,21 @@ export function Header() {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - Helvetica Roman */}
           <nav className="hidden md:flex md:gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative text-sm font-medium tracking-wide transition-colors duration-300 ${
+                className={`relative text-sm transition-colors duration-300 ${
                   pathname === link.href
                     ? "text-[var(--lusso-charcoal)]"
                     : "text-[var(--lusso-stone)] hover:text-[var(--lusso-charcoal)]"
                 }`}
+                style={{
+                  fontFamily: "'Helvetica Roman', 'Helvetica', sans-serif",
+                  letterSpacing: '0.08em',
+                }}
               >
                 {link.label}
                 {pathname === link.href && (

@@ -40,7 +40,7 @@ export function Hero() {
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="overline"
             >
-              Design × Branding × Estratégia
+              design × branding × estratégia
             </motion.div>
 
             {/* Main Headline - Asymmetric Typography */}
@@ -49,26 +49,28 @@ export function Hero() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="font-accent text-[clamp(2.5rem,8vw,8rem)] leading-[0.95] tracking-tight text-[var(--lusso-charcoal)]"
+                className="text-[clamp(2.5rem,8vw,8rem)] leading-[0.95] text-[var(--lusso-charcoal)]"
+                style={{ fontFamily: "'Helvetica Black', 'Helvetica', sans-serif" }}
               >
-                Transformamos
+                transformamos
               </motion.h1>
 
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                className="font-accent text-[clamp(2.5rem,8vw,8rem)] leading-[0.95] tracking-tight text-[var(--lusso-charcoal)] pl-6 sm:pl-12 lg:pl-20"
+                className="text-[clamp(2.5rem,8vw,8rem)] leading-[0.95] text-[var(--lusso-charcoal)] pl-6 sm:pl-12 lg:pl-20"
+                style={{ fontFamily: "'Helvetica Black', 'Helvetica', sans-serif" }}
               >
-                <span className="serif-italic">marcas</span> em
+                <span className="serif-italic font-accent">marcas</span> em
               </motion.h1>
 
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="font-accent text-[clamp(2.5rem,8vw,8rem)] leading-[0.95] tracking-tight"
-                style={{ color: 'var(--lusso-sage)' }}
+                className="text-[clamp(2.5rem,8vw,8rem)] leading-[0.95]"
+                style={{ fontFamily: "'Helvetica Black', 'Helvetica', sans-serif", color: '#510301' }}
               >
                 experiências
               </motion.h1>
@@ -96,7 +98,7 @@ export function Hero() {
                 href="/portfolio"
                 className="group inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-[var(--lusso-charcoal)] text-[var(--lusso-ivory)] hover:bg-[var(--lusso-charcoal-soft)] transition-all duration-300 text-sm sm:text-base"
               >
-                <span className="font-medium tracking-wide">Ver Portfólio</span>
+                <span className="font-medium tracking-wide">ver portfólio</span>
                 <svg
                   className="w-4 h-4 group-hover:translate-x-1 transition-transform"
                   fill="none"
@@ -111,7 +113,7 @@ export function Hero() {
                 href="/contato"
                 className="group inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 border-2 border-[var(--lusso-charcoal)] text-[var(--lusso-charcoal)] hover:bg-[var(--lusso-charcoal)] hover:text-[var(--lusso-ivory)] transition-all duration-300 text-sm sm:text-base"
               >
-                <span className="font-medium tracking-wide">Iniciar Projeto</span>
+                <span className="font-medium tracking-wide">iniciar projeto</span>
               </Link>
             </motion.div>
           </div>
@@ -170,7 +172,7 @@ export function Hero() {
         className="absolute bottom-12 left-1/2 -translate-x-1/2"
       >
         <div className="flex flex-col items-center gap-2 text-[var(--lusso-stone)]">
-          <span className="text-xs font-medium tracking-widest uppercase">Scroll</span>
+          <span className="text-xs font-medium tracking-widest">scroll</span>
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}

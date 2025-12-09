@@ -24,9 +24,9 @@ export default function SobrePage() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-accent text-6xl lg:text-7xl tracking-tight text-[var(--lusso-charcoal)] leading-tight mb-8"
           >
-            Sobre a
+            sobre a
             <br />
-            <span className="serif-italic">Agência Lusso</span>
+            <span className="serif-italic">agência lusso</span>
           </motion.h1>
 
           <motion.p
@@ -48,9 +48,9 @@ export default function SobrePage() {
             {/* Text Content - Left */}
             <div className="lg:col-span-5">
               <h2 className="font-accent text-4xl sm:text-5xl lg:text-6xl text-[var(--lusso-charcoal)] tracking-tight leading-tight mb-6 sm:mb-8">
-                Nossa
+                nossa
                 <br />
-                <span className="serif-italic">História</span>
+                <span className="serif-italic">história</span>
               </h2>
 
               <div className="space-y-4 sm:space-y-6 text-[var(--lusso-stone)] leading-relaxed text-sm sm:text-base">
@@ -97,26 +97,26 @@ export default function SobrePage() {
       <section className="py-20 lg:py-24 px-6 lg:px-12 bg-[var(--lusso-charcoal)]">
         <div className="container mx-auto max-w-7xl">
           <h2 className="font-accent text-5xl lg:text-6xl text-[var(--lusso-ivory)] tracking-tight text-center mb-20">
-            Nossos <span className="serif-italic">Pilares</span>
+            nossos <span className="serif-italic">pilares</span>
           </h2>
 
           <div className="grid md:grid-cols-3 gap-16">
             {[
               {
                 number: "01",
-                title: "Missão",
+                title: "missão",
                 description:
                   "Transformar marcas em experiências inesquecíveis através de design excepcional, estratégias criativas e um atendimento próximo e personalizado.",
               },
               {
                 number: "02",
-                title: "Visão",
+                title: "visão",
                 description:
                   "Ser referência em marketing e design no Espírito Santo, reconhecida pela qualidade dos projetos e pelo impacto positivo que geramos.",
               },
               {
                 number: "03",
-                title: "Valores",
+                title: "valores",
                 description:
                   "Autenticidade • Excelência • Parceria verdadeira • Criatividade • Compromisso com resultados",
               },
@@ -125,7 +125,10 @@ export default function SobrePage() {
                 key={pillar.number}
                 className="space-y-4"
               >
-                <div className="font-accent text-7xl text-[var(--lusso-sage)]/30">
+                <div
+                  className="text-7xl text-[var(--lusso-ivory)]/20"
+                  style={{ fontFamily: "'Helvetica Extra Compressed', 'Helvetica', sans-serif" }}
+                >
                   {pillar.number}
                 </div>
                 <h3 className="font-accent text-3xl text-[var(--lusso-ivory)]">
@@ -145,9 +148,9 @@ export default function SobrePage() {
         <div className="container mx-auto max-w-4xl text-center">
           <div className="space-y-8">
             <h2 className="font-accent text-5xl lg:text-6xl text-[var(--lusso-charcoal)] tracking-tight leading-tight">
-              O Que
+              o que
               <br />
-              <span className="serif-italic">Nos Move</span>
+              <span className="serif-italic">nos move</span>
             </h2>
 
             <div className="space-y-6 text-[var(--lusso-stone)] text-lg leading-relaxed">
@@ -175,28 +178,28 @@ export default function SobrePage() {
       <section className="py-20 lg:py-24 px-6 lg:px-12 bg-[var(--lusso-ivory)]">
         <div className="container mx-auto max-w-7xl">
           <h2 className="font-accent text-5xl lg:text-6xl text-[var(--lusso-charcoal)] tracking-tight mb-20">
-            Por Que <span className="serif-italic">Escolher a Lusso?</span>
+            por que <span className="serif-italic">escolher a lusso?</span>
           </h2>
 
           <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
             {[
               {
-                title: "Atendimento Personalizado",
+                title: "atendimento personalizado",
                 description:
                   "Cada cliente é único e merece atenção exclusiva. Trabalhamos de forma próxima para entender profundamente seu negócio e objetivos.",
               },
               {
-                title: "Design de Excelência",
+                title: "design de excelência",
                 description:
                   "Nosso portfólio fala por si. Criamos designs que não apenas impressionam visualmente, mas também comunicam com eficácia.",
               },
               {
-                title: "Resultados Mensuráveis",
+                title: "resultados mensuráveis",
                 description:
                   "Trabalhamos com métricas e dados para garantir que cada ação gere resultados concretos para o seu negócio.",
               },
               {
-                title: "Agilidade e Compromisso",
+                title: "agilidade e compromisso",
                 description:
                   "Cumprimos prazos, respondemos rápido e estamos sempre disponíveis para ajustar o que for necessário.",
               },

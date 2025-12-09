@@ -21,38 +21,43 @@ export function Footer() {
           {/* Navigation */}
           <div className="lg:col-span-3 space-y-4">
             <div className="overline !text-[var(--lusso-sage-muted)]">
-              Navegação
+              navegação
             </div>
             <nav className="flex flex-col space-y-3">
               <Link
                 href="/"
                 className="text-sm text-[var(--lusso-taupe)] hover:text-[var(--lusso-ivory)] transition-colors"
+                style={{ fontFamily: "'Helvetica Roman', 'Helvetica', sans-serif" }}
               >
-                Home
+                home
               </Link>
               <Link
                 href="/sobre"
                 className="text-sm text-[var(--lusso-taupe)] hover:text-[var(--lusso-ivory)] transition-colors"
+                style={{ fontFamily: "'Helvetica Roman', 'Helvetica', sans-serif" }}
               >
-                Sobre
+                sobre
               </Link>
               <Link
                 href="/servicos"
                 className="text-sm text-[var(--lusso-taupe)] hover:text-[var(--lusso-ivory)] transition-colors"
+                style={{ fontFamily: "'Helvetica Roman', 'Helvetica', sans-serif" }}
               >
-                Serviços
+                serviços
               </Link>
               <Link
                 href="/portfolio"
                 className="text-sm text-[var(--lusso-taupe)] hover:text-[var(--lusso-ivory)] transition-colors"
+                style={{ fontFamily: "'Helvetica Roman', 'Helvetica', sans-serif" }}
               >
-                Portfólio
+                portfólio
               </Link>
               <Link
                 href="/contato"
                 className="text-sm text-[var(--lusso-taupe)] hover:text-[var(--lusso-ivory)] transition-colors"
+                style={{ fontFamily: "'Helvetica Roman', 'Helvetica', sans-serif" }}
               >
-                Contato
+                contato
               </Link>
             </nav>
           </div>
@@ -60,7 +65,7 @@ export function Footer() {
           {/* Contact */}
           <div className="lg:col-span-4 space-y-4">
             <div className="overline !text-[var(--lusso-sage-muted)]">
-              Contato
+              contato
             </div>
             <div className="space-y-3">
               <a
@@ -82,6 +87,14 @@ export function Footer() {
                 className="block text-sm text-[var(--lusso-taupe)] hover:text-[var(--lusso-ivory)] transition-colors"
               >
                 Instagram
+              </a>
+              <a
+                href="https://www.linkedin.com/company/90883279"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-sm text-[var(--lusso-taupe)] hover:text-[var(--lusso-ivory)] transition-colors"
+              >
+                LinkedIn
               </a>
             </div>
           </div>

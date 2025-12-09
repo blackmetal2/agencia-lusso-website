@@ -212,7 +212,7 @@ export function ContactForm() {
               </span>
             ) : (
               <span className="flex items-center gap-2">
-                Enviar mensagem
+                enviar mensagem
                 <Send className="h-4 w-4" />
               </span>
             )}

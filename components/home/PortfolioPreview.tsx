@@ -36,9 +36,9 @@ export function PortfolioPreview() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-accent text-4xl sm:text-5xl lg:text-6xl tracking-tight text-[var(--lusso-charcoal)] leading-tight mb-6"
           >
-            Projetos em
+            projetos em
             <br />
-            <span className="serif-italic">Destaque</span>
+            <span className="serif-italic">destaque</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -87,9 +87,9 @@ export function PortfolioPreview() {
                   {/* Hover Overlay - Minimal & Refined */}
                   <div className="absolute inset-0 bg-[var(--lusso-charcoal)]/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
                     <div className="text-[var(--lusso-ivory)]">
-                      <div className="text-xs tracking-widest uppercase mb-3 text-[var(--lusso-sage)]">
-                        {project.serviceType === "social-media" ? "Social Media" :
-                         project.serviceType === "design" ? "Design" : "Branding"}
+                      <div className="text-xs tracking-widest mb-3 text-[var(--lusso-sage)]">
+                        {project.serviceType === "social-media" ? "social media" :
+                         project.serviceType === "design" ? "design" : "branding"}
                       </div>
                       <h3 className="font-accent text-2xl lg:text-3xl mb-2 leading-tight">
                         {project.title}
@@ -103,9 +103,9 @@ export function PortfolioPreview() {
                           href={project.behanceUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-xs tracking-wide uppercase text-[var(--lusso-ivory)] border-b border-[var(--lusso-ivory)]/50 hover:border-[var(--lusso-ivory)] transition-colors pb-1"
+                          className="inline-flex items-center gap-2 text-xs tracking-wide text-[var(--lusso-ivory)] border-b border-[var(--lusso-ivory)]/50 hover:border-[var(--lusso-ivory)] transition-colors pb-1"
                         >
-                          Ver Projeto
+                          ver projeto
                           <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                           </svg>
@@ -159,9 +159,9 @@ export function PortfolioPreview() {
                 </div>
 
                 <div className="pt-4">
-                  <div className="text-xs tracking-widest uppercase mb-2 text-[var(--lusso-sage)]">
-                    {project.serviceType === "social-media" ? "Social Media" :
-                     project.serviceType === "design" ? "Design" : "Branding"}
+                  <div className="text-xs tracking-widest mb-2 text-[var(--lusso-sage)]">
+                    {project.serviceType === "social-media" ? "social media" :
+                     project.serviceType === "design" ? "design" : "branding"}
                   </div>
                   <h3 className="font-accent text-xl text-[var(--lusso-charcoal)] mb-1">
                     {project.title}
@@ -185,9 +185,9 @@ export function PortfolioPreview() {
         >
           <Link
             href="/portfolio"
-            className="inline-flex items-center gap-3 text-sm font-medium tracking-wide text-[var(--lusso-charcoal)] hover:text-[var(--lusso-sage)] transition-colors uppercase"
+            className="inline-flex items-center gap-3 text-sm font-medium tracking-wide text-[var(--lusso-charcoal)] hover:text-[var(--lusso-sage)] transition-colors"
           >
-            <span>Ver Todo o Portfólio</span>
+            <span>ver todo o portfólio</span>
             <svg
               className="w-4 h-4"
               fill="none"

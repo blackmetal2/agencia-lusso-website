@@ -6,10 +6,10 @@ import { PortfolioCard } from "./PortfolioCard";
 import { portfolioItems } from "@/lib/portfolio-data";
 
 const filters = [
-  { id: "all", label: "Todos" },
-  { id: "social-media", label: "Social Media" },
-  { id: "design", label: "Design" },
-  { id: "branding", label: "Branding" },
+  { id: "all", label: "todos" },
+  { id: "social-media", label: "social media" },
+  { id: "design", label: "design" },
+  { id: "branding", label: "branding" },
 ];
 
 export function PortfolioGrid() {
@@ -40,9 +40,9 @@ export function PortfolioGrid() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-accent text-6xl lg:text-7xl tracking-tight text-[var(--lusso-charcoal)] leading-tight text-center mb-8"
           >
-            Nosso
+            nosso
             <br />
-            <span className="serif-italic">Portfólio</span>
+            <span className="serif-italic">portfólio</span>
           </motion.h1>
 
           <motion.p
@@ -113,33 +113,6 @@ export function PortfolioGrid() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 lg:py-24 px-6 lg:px-12 bg-[var(--lusso-charcoal)]">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-3 gap-12 text-center">
-            {[
-              { number: "50+", label: "Projetos Concluídos" },
-              { number: "30+", label: "Clientes Satisfeitos" },
-              { number: "5", label: "Anos de Experiência" },
-            ].map((stat, idx) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: idx * 0.1 }}
-              >
-                <div className="font-accent text-6xl lg:text-7xl text-[var(--lusso-sage)] mb-4">
-                  {stat.number}
-                </div>
-                <div className="text-[var(--lusso-taupe)] text-sm tracking-wide uppercase">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
