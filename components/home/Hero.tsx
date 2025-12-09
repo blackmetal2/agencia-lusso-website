@@ -49,8 +49,8 @@ export function Hero() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="text-[clamp(2.5rem,8vw,8rem)] leading-[0.95] text-[var(--lusso-charcoal)]"
-                style={{ fontFamily: "'Helvetica Black', 'Helvetica', sans-serif" }}
+                className="text-[clamp(2rem,5.5vw,6rem)] leading-[0.95] text-[var(--lusso-charcoal)]"
+                style={{ fontFamily: "'Helvetica Bold', 'Helvetica', sans-serif", fontWeight: 900 }}
               >
                 transformamos
               </motion.h1>
@@ -59,8 +59,8 @@ export function Hero() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                className="text-[clamp(2.5rem,8vw,8rem)] leading-[0.95] text-[var(--lusso-charcoal)] pl-6 sm:pl-12 lg:pl-20"
-                style={{ fontFamily: "'Helvetica Black', 'Helvetica', sans-serif" }}
+                className="text-[clamp(2rem,5.5vw,6rem)] leading-[0.95] text-[var(--lusso-charcoal)] pl-6 sm:pl-12 lg:pl-20"
+                style={{ fontFamily: "'Helvetica Bold', 'Helvetica', sans-serif", fontWeight: 900 }}
               >
                 <span className="serif-italic font-accent">marcas</span> em
               </motion.h1>
@@ -69,8 +69,8 @@ export function Hero() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="text-[clamp(2.5rem,8vw,8rem)] leading-[0.95]"
-                style={{ fontFamily: "'Helvetica Black', 'Helvetica', sans-serif", color: '#510301' }}
+                className="text-[clamp(2rem,5.5vw,6rem)] leading-[0.95] whitespace-nowrap tracking-tight"
+                style={{ fontFamily: "'Helvetica Bold', 'Helvetica', sans-serif", fontWeight: 900, color: '#510301' }}
               >
                 experiências
               </motion.h1>
